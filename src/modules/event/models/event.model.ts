@@ -1,5 +1,21 @@
 import { EventStatus, EventCategory } from '../../../shared/enums';
 
+export interface EventConstructorData {
+  id: string;
+  title: string;
+  description: string;
+  category: EventCategory;
+  status?: EventStatus;
+  startDate: Date;
+  endDate: Date;
+  venue: string;
+  capacity: number;
+  registeredCount?: number;
+  organizerId: string;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
 export class Event {
   id: string;
   title: string;
@@ -15,7 +31,7 @@ export class Event {
   createdAt: Date;
   updatedAt: Date;
 
-  constructor(data: any) {
+  constructor(data: EventConstructorData) {
     this.id = data.id;
     this.title = data.title;
     this.description = data.description;

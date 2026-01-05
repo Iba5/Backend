@@ -1,5 +1,18 @@
 import { UserRole } from '../../../shared/enums';
 
+export interface UserConstructorData {
+  id: string;
+  email: string;
+  username: string;
+  passwordHash: string;
+  firstName: string;
+  lastName: string;
+  role?: UserRole;
+  isActive?: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
 export class User {
   id: string;
   email: string;
@@ -12,7 +25,7 @@ export class User {
   createdAt: Date;
   updatedAt: Date;
 
-  constructor(data: any) {
+  constructor(data: UserConstructorData) {
     this.id = data.id;
     this.email = data.email;
     this.username = data.username;
