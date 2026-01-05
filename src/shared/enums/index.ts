@@ -1,0 +1,31 @@
+export enum UserRole {
+  ADMIN = 'ADMIN',
+  ORGANIZER = 'ORGANIZER',
+  PARTICIPANT = 'PARTICIPANT',
+  GUEST = 'GUEST',
+}
+
+export enum EventStatus {
+  DRAFT = 'DRAFT',
+  PUBLISHED = 'PUBLISHED',
+  ONGOING = 'ONGOING',
+  COMPLETED = 'COMPLETED',
+  CANCELLED = 'CANCELLED',
+}
+
+export enum RegistrationStatus {
+  PENDING = 'PENDING',
+  APPROVED = 'APPROVED',
+  REJECTED = 'REJECTED',
+  CANCELLED = 'CANCELLED',
+}
+
+export enum EventCategory {
+  TECHNICAL = 'TECHNICAL',
+  CULTURAL = 'CULTURAL',
+  SPORTS = 'SPORTS',
+  WORKSHOP = 'WORKSHOP',
+  SEMINAR = 'SEMINAR',
+  COMPETITION = 'COMPETITION',
+  OTHER = 'OTHER',
+}
